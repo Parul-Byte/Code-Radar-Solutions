@@ -2,25 +2,29 @@
 
 int main() {
     int num1, num2;
-    char operator;
+    char op;
 
-    // Taking input in the format: num1 operator num2
-    scanf("%d %c %d", &num1, &operator, &num2);
+    scanf("%d %d %c", &num1, &num2, &op);
 
-    if (operator == '+') {
-        printf("%d\n", num1 + num2);
-    } else if (operator == '-') {
-        printf("%d\n", num1 - num2);
-    } else if (operator == '*') {
-        printf("%d\n", num1 * num2);
-    } else if (operator == '/') {
-        if (num2 != 0) {
-            printf("%d\n", num1 / num2);
-        } else {
-            printf("Error\n");
-        }
-    } else {
-        printf("Error\n");
+    switch (op) {
+        case '+':
+            printf("%d\n", num1 + num2);
+            break;
+        case '-':
+            printf("%d\n", num1 - num2);
+            break;
+        case '*':
+            printf("%d\n", num1 * num2);
+            break;
+        case '/':
+            if (num2 != 0) {
+                printf("%d\n", num1 / num2);
+            } else {
+                printf("error\n");
+            }
+            break;
+        default:
+            printf("error\n");
     }
 
     return 0;
