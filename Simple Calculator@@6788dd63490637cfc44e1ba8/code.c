@@ -4,6 +4,7 @@ int main() {
     int num1, num2;
     char operator;
 
+    // Taking input in the format: num1 operator num2
     scanf("%d %c %d", &num1, &operator, &num2);
 
     if (operator == '+') {
@@ -18,6 +19,8 @@ int main() {
         } else {
             printf("Error\n");
         }
+    } else {
+        printf("Error\n");
     }
 
     return 0;
