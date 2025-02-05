@@ -1,9 +1,5 @@
 #include <stdio.h>
 
-char* welcome() {
-    return "Welcome to Code Radar!";
-}
-
 int main() {
     int num;
     scanf("%d", &num);
@@ -21,5 +17,6 @@ int main() {
         }
         printf("%d\n", position);  // Output the position of the lowest set bit
     }
+    
     return 0;
 }
