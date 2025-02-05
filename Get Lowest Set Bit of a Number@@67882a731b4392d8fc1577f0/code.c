@@ -1,23 +1,33 @@
 #include <stdio.h>
 
-int main() {
-    int num;
-    scanf("%d", &num);
+int getLowestSetBitPosition(int n) {
+    if (n == 0) {
+        return -1; // No set bit found
+    }
     
-    // If the number is 0, there are no set bits
-    if (num == 0) {
-        printf("No set bit\n");
+    // Isolate the lowest set bit
+    int lowestSetBit = n & -n;
+    
+    // Find the position of the lowest set bit
+    int position = 0;
+    while (lowestSetBit >>= 1) {
+        position++;
+    }
+    
+    return position;
+}
+
+int main() {
+    int n;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    
+    int position = getLowestSetBitPosition(n);
+    
+    if (position != -1) {
+        printf("The position of the lowest set bit is: %d\n", position);
     } else {
-        // Use the expression (num & -num) to isolate the lowest set bit
-        int position = 1;
-        
-        // Find the position of the lowest set bit
-        while (!(num & 1)) {
-            num >>= 1;
-            position++;
-        }
-        
-        printf("%d\n", position);  // Output the position of the lowest set bit
+        printf("No set bit found.\n");
     }
     
     return 0;
