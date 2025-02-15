@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    float pi=3.14;
+    float pi;
     printf("enter pi");
-    scanf("%f",pi);
-
+    scanf("%f",&pi);
+    printf("You entered:%f\n", pi);
     return 0;
 }
