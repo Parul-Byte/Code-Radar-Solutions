@@ -3,7 +3,7 @@
 int main() {
     float pi;
     printf("enter pi");
-    scanf("%f"/n,pi);
+    scanf("%f",pi);
     printf("%f", pi);
     return 0;
 }
