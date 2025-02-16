@@ -1,13 +1,9 @@
 #include <stdio.h>
 
-char* welcome() {
-    return "Welcome to Code Radar!";
-}
-
 int main() {
-    int num, shift;
-    scanf("%d %d", &num, &shift);
+    int a, b;
+    scanf("%d %d", &a, &b);
     
-    printf("%d\n", num << shift);
+    printf("%d", a << b);
     return 0;
 }
