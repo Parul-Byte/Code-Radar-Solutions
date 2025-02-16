@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <string.h>  // yeh header file add karo
+#include <string.h>
+#include <ctype.h> // yeh header file add karo
 
 int main() {
     char ch;
