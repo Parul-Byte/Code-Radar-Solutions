@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <string.h> 
+#include <string.h>  // yeh header file add karo
 
 int main() {
     char ch;
     scanf("%c", &ch);
-    
+
     if (isdigit(ch))
         printf("Digit\n");
     else if (strchr("aeiouAEIOU", ch))
@@ -13,10 +13,10 @@ int main() {
         printf("Consonant\n");
     else
         printf("Special Character\n");
-    
+
     return 0;
 }
-    
+ 
 
 
 
