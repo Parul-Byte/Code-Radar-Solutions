@@ -7,8 +7,7 @@ int main() {
     
     if (isdigit(ch))
         printf("Digit\n");
-    else if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || 
-             ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+    else if  (strchr("aeiouAEIOU", ch))
         printf("Vowel\n");
     else if (isalpha(ch))
         printf("Consonant\n");
@@ -17,3 +16,7 @@ int main() {
     
     return 0;
 }
+    
+
+
+
