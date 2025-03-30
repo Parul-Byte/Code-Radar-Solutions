@@ -10,7 +10,6 @@ int factorial(int n){
 
             int main(){
                 int num;
-                printf("Enter a no.");
                 scanf("%d", &num);
                 if (num<0){
                     printf("Factorial is not defined\n");
