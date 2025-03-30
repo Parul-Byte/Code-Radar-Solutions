@@ -1,8 +1,8 @@
 #include <stdio.h>
-void fib(int n) {
+void fibonacciSeries(int n) {
     int a=0, b=1;
     while(n--){
-    printf("%d ", a);
+        printf("%d ", a);
         b+=a;
         a=b-a;
     }
@@ -12,7 +12,7 @@ void fib(int n) {
 int main() {
     int n;
     scanf("%d", &n);
-    if (n > 0) fib(n);
+    if (n > 0) fibonacciSeries(n);
     else printf("Invalid Input");
     return 0;
 }
