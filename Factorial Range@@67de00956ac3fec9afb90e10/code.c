@@ -1,24 +1,17 @@
-#include <stdio.h>
-
-// Recursive function to calculate factorial
-int factorial(int n) {
-    if (n > 0) {  // Base condition check
-        return n * factorial(n - 1);  // Recursive call
-    } else {
-        return 1;  // Base case: factorial(0) = 1
-    }
-}
-
-int main() {
-    int num;
-    printf("Enter a number: ");
-    scanf("%d", &num);
-
-    if (num < 0) {
-        printf("Factorial is not defined for negative numbers.\\n");
-    } else {
-        printf("Factorial of %d is %d\\n", num, factorial(num));
-    }
-
-    return 0;
-}
+/******* Factorial of a given number using Recursion ******/ 
+#include<stdio.h> 
+int fact(int n); 
+void main( ) 
+{ 
+int num,result; 
+printf("enter number:"); 
+scanf("%d",&num); 
+result=fact(num); 
+printf("The factorial of a number is: %d",result); 
+} 
+int fact(int n) 
+{ 
+if(n==0) 
+return 1; 
+else 
+return (n*fact(n-1));
