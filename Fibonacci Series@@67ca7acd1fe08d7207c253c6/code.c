@@ -1,7 +1,5 @@
-// Online C compiler to run C program online
 #include <stdio.h>
-
-int main() {
+    int main() {
     int n, a=0, b=1, c;
     scanf("%d", &n);
     while (n--){
