@@ -6,7 +6,7 @@ int factorial(int n){
             }else{
                 return 1;
             }
-}
+            }
 
             int main(){
                 int num;
@@ -16,8 +16,7 @@ int factorial(int n){
                 } else{
                     printf("Factorial of %d is %d\n", num, factorial(num));
                 }
-            }
-}
+            
 
     return 0;
 }
