@@ -1,12 +1,17 @@
 #include <stdio.h>
-    int main() {
-    int n, a=0, b=1, c;
-    scanf("%d", &n);
-    while (n--){
-    printf("%d",a);
-    c=a+b;
-    a=b;
-    b=c;}
+#include <stdio.h>
 
+void fibonacci(int a, int b, int n) {
+    if (n <= 0) return;  
+    printf("%d ", a);
+    fibonacci(b, a + b, n - 1);
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    if (n > 0) {
+        fibonacci(0, 1, n);
+    }
     return 0;
 }
