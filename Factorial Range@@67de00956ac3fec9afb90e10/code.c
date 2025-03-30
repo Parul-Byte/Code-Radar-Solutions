@@ -1,31 +1,23 @@
 #include <stdio.h>
 
-void fibonacci(int n) {
-    int a = 0, b = 1, next;
-    
-    if (n <= 0) {
-        printf("Invalid input\n");
-        return;
-    }
+int factorial(int n){
+    if (n>0){
+        return n*factorial(n-1);
+            }else{
+                return 1;
+            }
 
-    for (int i = 0; i < n; i++) {
-        printf("%d", a);
-        if (i < n - 1) printf(" "); // Space separation
-        next = a + b;
-        a = b;
-        b = next;
-    }
-    printf("\n");
+            int main(){
+                int num;
+                printf("Enter a no.");
+                scanf("%d", &num);
+                if (num<0){
+                    printf("Factorial is not defined\n");
+                } else{
+                    printf("Factorial of %d is %d\n", num, factorial(num));
+                }
+            }
 }
-
-int main() {
-    int n;
-
-    // Read the number of terms
-    scanf("%d", &n);
-
-    // Generate and print Fibonacci series
-    fibonacci(n);
 
     return 0;
 }
